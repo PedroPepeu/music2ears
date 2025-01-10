@@ -3,4 +3,17 @@ declare module '*.svg' {
     export default content;
 }
 
-// declare module '@shadcn/ui';
+declare module '*.jpg' {
+    const value: string;
+    export default value;
+}
+
+declare module '*.png' {
+    const value: string;
+    export default value;
+}
+
+declare module '*.jpeg' {
+    const value: string;
+    export default value;
+}
