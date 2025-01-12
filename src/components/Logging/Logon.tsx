@@ -1,11 +1,13 @@
 import React from 'react';
 import Header from './../Template/Header/Header.tsx';
 
+import { Link } from 'react-router-dom'
+
 function Logon() {
     return (
         <div>
             <Header />
-            <form>
+            <form className="p-24">
                 <div className="space-y-12">
                     <div className="border-b border-gray-900/10 pb-12">
                         <h2 className="text-base/7 font-semibold text-gray-900">Profile</h2>
@@ -15,19 +17,11 @@ function Logon() {
                             <div className="sm:col-span-4">
                                 <label htmlFor="username" className="block text-sm/6 font-medium text-gray-900">Username</label>
                                 <div className="mt-2">
-                                    <div className="flex items-center rounded-md bg-white pl-3 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
-                                        <div className="shrink-0 select-none text-base text-gray-500 sm:text-sm/6">workcation.com/</div>
+                                    <div className="flex items-center rounded-md bg-white pl-3 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-red-600">
+                                        <div className="shrink-0 select-none text-base text-gray-500 sm:text-sm/6">music4ear.br/</div>
                                         <input type="text" name="username" id="username" className="block min-w-0 grow py-1.5 pl-1 pr-3 text-base text-gray-900 placeholder:text-gray-400 focus:outline focus:outline-0 sm:text-sm/6" placeholder="janesmith" />
                                     </div>
                                 </div>
-                            </div>
-
-                            <div className="col-span-full">
-                                <label htmlFor="about" className="block text-sm/6 font-medium text-gray-900">About</label>
-                                <div className="mt-2">
-                                    <textarea name="about" id="about" rows={3} className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></textarea>
-                                </div>
-                                <p className="mt-3 text-sm/6 text-gray-600">Write a few sentences about yourself.</p>
                             </div>
 
                             <div className="col-span-full">
@@ -48,7 +42,7 @@ function Logon() {
                                             <path fillRule="evenodd" d="M1.5 6a2.25 2.25 0 0 1 2.25-2.25h16.5A2.25 2.25 0 0 1 22.5 6v12a2.25 2.25 0 0 1-2.25 2.25H3.75A2.25 2.25 0 0 1 1.5 18V6ZM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0 0 21 18v-1.94l-2.69-2.689a1.5 1.5 0 0 0-2.12 0l-.88.879.97.97a.75.75 0 1 1-1.06 1.06l-5.16-5.159a1.5 1.5 0 0 0-2.12 0L3 16.061Zm10.125-7.81a1.125 1.125 0 1 1 2.25 0 1.125 1.125 0 0 1-2.25 0Z" clipRule="evenodd" />
                                         </svg>
                                         <div className="mt-4 flex text-sm/6 text-gray-600">
-                                            <label htmlFor="file-upload" className="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
+                                            <label htmlFor="file-upload" className="relative cursor-pointer rounded-md bg-white font-semibold text-red-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-red-600 focus-within:ring-offset-2 hover:text-red-500">
                                                 <span>Upload a file</span>
                                                 <input id="file-upload" name="file-upload" type="file" className="sr-only" />
                                             </label>
@@ -69,28 +63,21 @@ function Logon() {
                             <div className="sm:col-span-3">
                                 <label htmlFor="first-name" className="block text-sm/6 font-medium text-gray-900">First name</label>
                                 <div className="mt-2">
-                                    <input type="text" name="first-name" id="first-name" autoComplete="given-name" className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
+                                    <input type="text" name="first-name" id="first-name" autoComplete="given-name" className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-red-600 sm:text-sm/6" />
                                 </div>
                             </div>
 
                             <div className="sm:col-span-3">
                                 <label htmlFor="last-name" className="block text-sm/6 font-medium text-gray-900">Last name</label>
                                 <div className="mt-2">
-                                    <input type="text" name="last-name" id="last-name" autoComplete="family-name" className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
+                                    <input type="text" name="last-name" id="last-name" autoComplete="family-name" className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-red-600 sm:text-sm/6" />
                                 </div>
                             </div>
 
                             <div className="sm:col-span-4">
                                 <label htmlFor="email" className="block text-sm/6 font-medium text-gray-900">Email address</label>
                                 <div className="mt-2">
-                                    <input id="email" name="email" type="email" autoComplete="email" className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
-                                </div>
-                            </div>
-
-                            <div className="sm:col-span-6">
-                                <label htmlFor="street-address" className="block text-sm/6 font-medium text-gray-900">Street address</label>
-                                <div className="mt-2">
-                                    <input type="text" name="street-address" id="street-address" autoComplete="street-address" className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
+                                    <input id="email" name="email" type="email" autoComplete="email" className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-red-600 sm:text-sm/6" />
                                 </div>
                             </div>
                         </div>
@@ -103,19 +90,11 @@ function Logon() {
 
                     <div className="mt-10 space-y-4">
                         <div className="flex items-center gap-x-3">
-                            <input id="comments" name="comments" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500" />
-                            <label htmlFor="comments" className="text-sm/6 font-medium text-gray-900">Comments and replies</label>
-                        </div>
-                        <div className="flex items-center gap-x-3">
-                            <input id="mentions" name="mentions" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500" />
-                            <label htmlFor="mentions" className="text-sm/6 font-medium text-gray-900">Mentions</label>
-                        </div>
-                        <div className="flex items-center gap-x-3">
-                            <input id="newsletter" name="newsletter" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500" />
+                            <input id="newsletter" name="newsletter" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-red-600 focus:ring-red-500" />
                             <label htmlFor="newsletter" className="text-sm/6 font-medium text-gray-900">Newsletter</label>
                         </div>
                         <div className="flex items-center gap-x-3">
-                            <input id="product-updates" name="product-updates" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500" />
+                            <input id="product-updates" name="product-updates" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-red-600 focus:ring-red-500" />
                             <label htmlFor="product-updates" className="text-sm/6 font-medium text-gray-900">Product updates</label>
                         </div>
                     </div>
@@ -123,7 +102,7 @@ function Logon() {
 
                 <div className="mt-6 flex justify-end gap-x-6">
                     <button type="button" className="text-sm font-semibold text-gray-900">Cancel</button>
-                    <button type="submit" className="inline-flex rounded-md border border-transparent bg-indigo-600 px-4 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Save</button>
+                    <Link to="/login"><button type="submit" className="inline-flex rounded-md border border-transparent bg-red-600 px-4 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">Create account</button></Link>
                 </div>
             </form>
         </div>

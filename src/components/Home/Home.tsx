@@ -1,12 +1,15 @@
-import React from "react";
+import React from "react"
+
+import HeaderPosLog from "../Template/Header/HeaderPosLog.tsx"
+import History from "../Template/Music/History.tsx"
+import Recomendation from "../Template/Music/Recomendation.tsx";
 
 function Home() {
     return (
         <div>
-            <header> logo payment feature music login sign up</header>
-            <div>slider</div>
-            <div>content1</div>
-            <div>content2</div>
+            <HeaderPosLog />
+            <History />
+            <Recomendation />
         </div>
     );
 }
