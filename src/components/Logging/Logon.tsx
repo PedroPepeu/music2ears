@@ -1,13 +1,14 @@
 import React from 'react';
 import Header from './../Template/Header/Header.tsx';
-
 import { Link } from 'react-router-dom'
+
+import { handleFormSubmit, handleInputChange } from './Logic/logonLogic.ts'
 
 function Logon() {
     return (
         <div>
             <Header />
-            <form className="p-24">
+            <form className="p-24" onSubmit={handleFormSubmit}>
                 <div className="space-y-12">
                     <div className="border-b border-gray-900/10 pb-12">
                         <h2 className="text-base/7 font-semibold text-gray-900">Profile</h2>
@@ -102,7 +103,7 @@ function Logon() {
 
                 <div className="mt-6 flex justify-end gap-x-6">
                     <button type="button" className="text-sm font-semibold text-gray-900">Cancel</button>
-                    <Link to="/login"><button type="submit" className="inline-flex rounded-md border border-transparent bg-red-600 px-4 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">Create account</button></Link>
+                    <button type="submit" className="inline-flex rounded-md border border-transparent bg-red-600 px-4 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">Create account</button>
                 </div>
             </form>
         </div>
